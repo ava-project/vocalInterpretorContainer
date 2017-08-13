@@ -1,4 +1,3 @@
 pocketsphinx
 websocket-client
-websockets
-
+tornado

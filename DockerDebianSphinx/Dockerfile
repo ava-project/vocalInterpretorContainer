@@ -13,7 +13,9 @@ ADD . /Sphinx
 
 # Install any needed packages specified for python and pocketsphinx
 RUN apt-get update
-RUN apt-get install -y python python-pip python-dev build-essential swig libpulse-dev git perl bison apt-utils
+RUN apt-get -y upgrade
+RUN apt-get -y install python python-pip python-dev
+RUN apt-get -y install build-essential swig libpulse-dev git perl bison apt-utils
 
 # Install any needed packages numpy and scipy
 RUN apt-get install -y python-numpy python-scipy
