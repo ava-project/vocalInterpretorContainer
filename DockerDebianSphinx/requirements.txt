@@ -1,0 +1,4 @@
+pocketsphinx
+websocket-client
+websockets
+
