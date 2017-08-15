@@ -1,5 +1,5 @@
 # Use of latest version of debian as a parent image
-FROM debian:latest
+FROM python:3.6
 
 # create working directories
 RUN mkdir -p /Sphinx
@@ -14,7 +14,7 @@ ADD . /Sphinx
 # Install any needed packages specified for python and pocketsphinx
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get -y install python python-pip python-dev
+RUN apt-get -y install python-pip python-dev
 RUN apt-get -y install build-essential swig libpulse-dev git perl bison apt-utils
 
 # Install any needed packages numpy and scipy
