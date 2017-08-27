@@ -1,4 +1,7 @@
 websocket-client
 watson-developer-cloud
-tornado
 websockets
+socket
+asyncio
+socket
+wave
