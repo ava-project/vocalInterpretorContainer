@@ -1,7 +1,5 @@
 websocket-client
 watson-developer-cloud
 websockets
-socket
 asyncio
-socket
 wave
