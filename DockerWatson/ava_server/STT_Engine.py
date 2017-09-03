@@ -5,8 +5,8 @@ class STT_Engine():
 
     def __init__(self):
         self.stt = SpeechToTextV1(
-            username = '9d526cf4-63de-47da-be7d-e5662d3cd1a9',
-            password = 'oWaCHHSTzjkO',
+            username = 'ed8e6084-ebe7-4570-a387-be01bcefcad5',
+            password = 'ksiqNlaLyhaX',
             x_watson_learning_opt_out=False
         )
 
