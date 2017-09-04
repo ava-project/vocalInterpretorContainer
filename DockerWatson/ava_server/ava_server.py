@@ -22,16 +22,9 @@ class WatsonBridge():
 		return ip
 
 	def runBridge(self, audio, websocket):
-		audio_file = io.BytesIO()
-		wf = wave.Wave_write(audio_file)
-		wf.setnchannels(2)
-		wf.setsampwidth(2)
-		wf.setframerate(44100)
-		wf.writeframes(audio)
-		audio_file.seek(0)
-		result = self.stt.recognize(audio_file)
-		if result :
-			print(result)
+                result = self.stt.recognize(audio)
+                print (result)
+                return (result)
 		# if result["results"][0]["alternatives"][0]["transcript"] :
 		# 	websocket.send(result["results"][0]["alternatives"][0]["transcript"])
 
@@ -39,9 +32,9 @@ class WatsonBridge():
                 # try:
                 print ("Listening to AVA client..")
                 audio = await websocket.recv()
-                self.runBridge(audio, websocket)
+                result = self.runBridge(audio, websocket)
                 print ("Message received...")
-                await websocket.send("done !")
+                await websocket.send(result["results"][0]["alternatives"][0]["transcript"])
 
                 # except:
                 #         print ("Error in listening to avaClient")
