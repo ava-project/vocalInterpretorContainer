@@ -1,6 +1,6 @@
 from watson_developer_cloud import SpeechToTextV1
 
-
+# Class used to connect and send informations to Watson
 class STT_Engine():
 
     def __init__(self):

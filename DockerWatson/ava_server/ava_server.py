@@ -6,7 +6,7 @@ import websockets
 import socket
 from .STT_Engine import STT_Engine
 
-
+# Watson server class
 class WatsonBridge():
 
 	def __init__(self):
@@ -21,24 +21,26 @@ class WatsonBridge():
 		s.close()
 		return ip
 
+        #Function used to send informations to Watson via STT_Engine
 	def runBridge(self, audio, websocket):
                 result = self.stt.recognize(audio)
                 print (result)
-                return (result)
-		# if result["results"][0]["alternatives"][0]["transcript"] :
-		# 	websocket.send(result["results"][0]["alternatives"][0]["transcript"])
+                if result["results"][0]["alternatives"][0]["transcript"] :
+                        return (result)
+                else :
+                        return ("Error with Watson..")
 
+        #Client listener
 	async def listener(self, websocket, path):
-                # try:
-                print ("Listening to AVA client..")
-                audio = await websocket.recv()
-                result = self.runBridge(audio, websocket)
-                print ("Message received...")
-                await websocket.send(result["results"][0]["alternatives"][0]["transcript"])
-
-                # except:
-                #         print ("Error in listening to avaClient")
-                #         pass
+                try:
+                        print ("Listening to AVA client..")
+                        audio = await websocket.recv()
+                        result = self.runBridge(audio, websocket)
+                        print ("Message received...")
+                        await websocket.send(result["results"][0]["alternatives"][0]["transcript"])
+                except:
+                         print ("Error in listening to avaClient")
+                         pass
 
 	def run(self):
 	    start_server = websockets.serve(self.listener, '0.0.0.0', 8766)
