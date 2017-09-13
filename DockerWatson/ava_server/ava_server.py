@@ -1,60 +1,57 @@
-import io
-import sys
-import wave
-import asyncio
-import websockets
 import socket
 from .STT_Engine import STT_Engine
 
+# tornado 
+import tornado.httpserver
+import tornado.websocket
+import tornado.ioloop
+import tornado.web
+
 # Watson server class
-class WatsonBridge():
+class WatsonBridge(tornado.websocket.WebSocketHandler):
 
 	def __init__(self):
 		self.stt = STT_Engine()
-		self.loop = asyncio.new_event_loop()
-		asyncio.set_event_loop(self.loop)
 
-	def get_ip_address(self):
-		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		s.connect(("8.8.8.8", 80))
-		ip = s.getsockname()[0]
-		s.close()
-		return ip
 
         #Function used to send informations to Watson via STT_Engine
-	def runBridge(self, audio, websocket):
-                result = self.stt.recognize(audio)
-                print (result)
-                if result["results"][0]["alternatives"][0]["transcript"] :
-                        return (result)
-                else :
-                        return ("Error with Watson..")
+	def runBridge(self, audio):
+	            result = self.stt.recognize(audio)
+	            print(result)
+	            if result["results"][0]["alternatives"][0]["transcript"] :
+	                    return (result)
+	            else :
+	                    return ("Error with Watson..")
 
-        #Client listener
-	async def listener(self, websocket, path):
-                try:
-                        print ("Listening to AVA client..")
-                        audio = await websocket.recv()
-                        result = self.runBridge(audio, websocket)
-                        print ("Message received...")
-                        await websocket.send(result["results"][0]["alternatives"][0]["transcript"])
-                except:
-                         print ("Error in listening to avaClient")
-                         pass
 
-	def run(self):
-	    start_server = websockets.serve(self.listener, '0.0.0.0', 8766)
-	    print("AVA WebSocket Server listening on {}:8766".format(self.get_ip_address()))
-	    self.loop.run_until_complete(start_server)
-	    self.loop.run_forever()
+	def open(self):
+	    print('Client IP:' + self.request.remote_ip)
+	    print('[new connection]')
 
-	# def stop(self):
-	#     print('Stopping {0}...'.format(self.__class__.__name__))
-	#     self.loop.stop()
+
+	def on_message(self, message):
+		result = self.runBridge(message)
+		print ("Message received...")
+		self.write_message(result["results"][0]["alternatives"][0]["transcript"])
+
+
+	def on_close(self):
+	    print('[connection closed]')
+
+
+	def check_origin(self, origin):
+	    return True
+
+
+application = tornado.web.Application([
+    (r'/ava_server', WatsonBridge),
+])
+
 
 def main():
-	serv = WatsonBridge()
 	print("AVA server launched")
-	while True:
-		serv.run()
-
+	http_server = tornado.httpserver.HTTPServer(application)
+	http_server.listen(8888)
+	myIP = socket.gethostbyname(socket.gethostname())
+	print('*** AVA Websocket Server Started at %s/ava_server***' % myIP)
+	tornado.ioloop.IOLoop.instance().start()

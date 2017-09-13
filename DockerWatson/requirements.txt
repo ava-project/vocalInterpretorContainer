@@ -3,3 +3,4 @@ watson-developer-cloud
 websockets
 asyncio
 wave
+tornado
