@@ -10,38 +10,35 @@ import tornado.web
 # Watson server class
 class WatsonBridge(tornado.websocket.WebSocketHandler):
 
-	def __init__(self):
-		self.stt = STT_Engine()
-
-
         #Function used to send informations to Watson via STT_Engine
 	def runBridge(self, audio):
-	            result = self.stt.recognize(audio)
-	            print(result)
-	            if result["results"][0]["alternatives"][0]["transcript"] :
-	                    return (result)
-	            else :
-	                    return ("Error with Watson..")
+                result = self.stt.recognize(audio)
+                print(result)
+                if result["results"][0]["alternatives"][0]["transcript"] :
+                        return (result)
+                else:
+                        return ("Error with Watson..")
 
 
 	def open(self):
-	    print('Client IP:' + self.request.remote_ip)
-	    print('[new connection]')
-
+                try:
+                        self.stt
+                except:
+                        self.stt = STT_Engine()
+                print('Client IP:' + self.request.remote_ip)
+                print('[new connection]')
 
 	def on_message(self, message):
-		result = self.runBridge(message)
-		print ("Message received...")
-		self.write_message(result["results"][0]["alternatives"][0]["transcript"])
-
+                result = self.runBridge(message)
+                print ("Message received...")
+                self.write_message(result["results"][0]["alternatives"][0]["transcript"])
 
 	def on_close(self):
-	    print('[connection closed]')
+                print('[connection closed]')
 
 
 	def check_origin(self, origin):
-	    return True
-
+                return True
 
 application = tornado.web.Application([
     (r'/ava_server', WatsonBridge),

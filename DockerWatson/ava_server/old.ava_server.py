@@ -6,13 +6,6 @@ import websockets
 import socket
 from .STT_Engine import STT_Engine
 
-# tornado 
-import tornado.httpserver
-import tornado.websocket
-import tornado.ioloop
-import tornado.web
-
-
 # Watson server class
 class WatsonBridge():
 
