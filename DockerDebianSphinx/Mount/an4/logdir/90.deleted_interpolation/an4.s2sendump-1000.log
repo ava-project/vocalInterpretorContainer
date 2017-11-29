@@ -1,0 +1,14 @@
+Current configuration:
+[NAME]		[DEFLT]	[VALUE]
+-example	no	no
+-help		no	no
+-mixwfn			/Sphinx/Mounted/an4/model_parameters/an4.cd_ptm_1000_delinterp/mixture_weights
+-moddeffn		/Sphinx/Mounted/an4/model_architecture/an4.1000.mdef
+-mwfloor	0.00001	1.000000e-07
+-pocketsphinx	no	yes
+-sendumpfn		/Sphinx/Mounted/an4/model_parameters/an4.cd_ptm_1000_delinterp/sendump
+
+ERROR: "model_def_io.c", line 413: Unable to open /Sphinx/Mounted/an4/model_architecture/an4.1000.mdef for reading: No such file or directory
+INFO: senone.c(210): Reading senone mixture weights: /Sphinx/Mounted/an4/model_parameters/an4.cd_ptm_1000_delinterp/mixture_weights
+FATAL: "senone.c", line 213: fopen(/Sphinx/Mounted/an4/model_parameters/an4.cd_ptm_1000_delinterp/mixture_weights,rb) failed
+Fri Oct 27 16:17:24 2017

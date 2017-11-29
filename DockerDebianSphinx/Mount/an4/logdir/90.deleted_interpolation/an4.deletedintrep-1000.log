@@ -1,0 +1,12 @@
+Current configuration:
+[NAME]		[DEFLT]	[VALUE]
+-accumdirs		/Sphinx/Mounted/an4/bwaccumdir/an4_buff_1,
+-cilambda	0.9	9.000000e-01
+-example	no	no
+-help		no	no
+-maxiter	100	4000
+-mixwfn			/Sphinx/Mounted/an4/model_parameters/an4.cd_ptm_1000_delinterp/mixture_weights
+-moddeffn		/Sphinx/Mounted/an4/model_architecture/an4.1000.mdef
+
+ERROR: "model_def_io.c", line 413: Unable to open /Sphinx/Mounted/an4/model_architecture/an4.1000.mdef for reading: No such file or directory
+Fri Oct 27 16:17:24 2017

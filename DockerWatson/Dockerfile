@@ -19,3 +19,5 @@ RUN pip install -r requirements.txt
 
 # Set the author
 MAINTAINER AVA_Watson<ava_2018@labeip.epitech.eu>
+
+CMD ["python3.6","-m","ava_server"]

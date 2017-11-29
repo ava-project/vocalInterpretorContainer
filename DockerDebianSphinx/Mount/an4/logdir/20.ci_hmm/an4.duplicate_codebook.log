@@ -1,0 +1,127 @@
+Current configuration:
+[NAME]		[DEFLT]	[VALUE]
+-dest_meanfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/means
+-dest_mixwfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/mixture_weights
+-dest_moddeffn		/Sphinx/Mounted/an4/model_architecture/an4.ci.mdef
+-dest_tmatfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/transition_matrices
+-dest_ts2cbfn		.ptm.
+-dest_varfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/variances
+-example	no	no
+-fullvar	no	no
+-help		no	no
+-src_meanfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/means
+-src_mixwfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/mixture_weights
+-src_moddeffn		/Sphinx/Mounted/an4/model_architecture/an4.ci.mdef
+-src_tmatfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/transition_matrices
+-src_ts2cbfn		.semi.
+-src_varfn		/Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/variances
+
+INFO: main.c(261): Reading src /Sphinx/Mounted/an4/model_architecture/an4.ci.mdef
+INFO: model_def_io.c(573): Model definition info:
+INFO: model_def_io.c(574): 34 total models defined (34 base, 0 tri)
+INFO: model_def_io.c(575): 136 total states
+INFO: model_def_io.c(576): 102 total tied states
+INFO: model_def_io.c(577): 102 total tied CI states
+INFO: model_def_io.c(578): 34 total tied transition matrices
+INFO: model_def_io.c(579): 4 max state/model
+INFO: model_def_io.c(580): 4 min state/model
+INFO: main.c(272): Generating semi-continous ts2cb mapping
+INFO: main.c(299): Reading src /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/mixture_weights
+INFO: s3mixw_io.c(117): Read /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/mixture_weights [102x4x64 array]
+INFO: main.c(309): Reading src /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/transition_matrices
+INFO: s3tmat_io.c(118): Read /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/transition_matrices [34x3x4 array]
+INFO: main.c(318): Reading src /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/means
+INFO: s3gau_io.c(169): Read /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/means [1x4x64 array]
+INFO: main.c(342): Reading src /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/variances
+INFO: s3gau_io.c(169): Read /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/variances [1x4x64 array]
+INFO: main.c(391): Reading dest /Sphinx/Mounted/an4/model_architecture/an4.ci.mdef
+INFO: model_def_io.c(573): Model definition info:
+INFO: model_def_io.c(574): 34 total models defined (34 base, 0 tri)
+INFO: model_def_io.c(575): 136 total states
+INFO: model_def_io.c(576): 102 total tied states
+INFO: model_def_io.c(577): 102 total tied CI states
+INFO: model_def_io.c(578): 34 total tied transition matrices
+INFO: model_def_io.c(579): 4 max state/model
+INFO: model_def_io.c(580): 4 min state/model
+INFO: main.c(413): Generating phonetically tied ts2cb mapping
+INFO: main.c(431): Calculating initial model parameters
+INFO: main.c(439): Alloc 34x3x4 dest tmat
+INFO: main.c(450): Alloc 102x4x64 dest mixw
+INFO: main.c(463): Alloc 34x4x64 dest mean and var
+        AA <- AA        : [tm     0 +=     0]
+[mx     0(0) +=     0] [mg     0(0) <-     0] [mx     1(1) +=     1] [mx     2(2) +=     2] 
+        AE <- AE        : [tm     1 +=     1]
+[mx     3(0) +=     3] [mg     1(0) <-     0] [mx     4(1) +=     4] [mx     5(2) +=     5] 
+        AH <- AH        : [tm     2 +=     2]
+[mx     6(0) +=     6] [mg     2(0) <-     0] [mx     7(1) +=     7] [mx     8(2) +=     8] 
+        AO <- AO        : [tm     3 +=     3]
+[mx     9(0) +=     9] [mg     3(0) <-     0] [mx    10(1) +=    10] [mx    11(2) +=    11] 
+        AW <- AW        : [tm     4 +=     4]
+[mx    12(0) +=    12] [mg     4(0) <-     0] [mx    13(1) +=    13] [mx    14(2) +=    14] 
+        AY <- AY        : [tm     5 +=     5]
+[mx    15(0) +=    15] [mg     5(0) <-     0] [mx    16(1) +=    16] [mx    17(2) +=    17] 
+         B <- B         : [tm     6 +=     6]
+[mx    18(0) +=    18] [mg     6(0) <-     0] [mx    19(1) +=    19] [mx    20(2) +=    20] 
+        CH <- CH        : [tm     7 +=     7]
+[mx    21(0) +=    21] [mg     7(0) <-     0] [mx    22(1) +=    22] [mx    23(2) +=    23] 
+         D <- D         : [tm     8 +=     8]
+[mx    24(0) +=    24] [mg     8(0) <-     0] [mx    25(1) +=    25] [mx    26(2) +=    26] 
+        EH <- EH        : [tm     9 +=     9]
+[mx    27(0) +=    27] [mg     9(0) <-     0] [mx    28(1) +=    28] [mx    29(2) +=    29] 
+        ER <- ER        : [tm    10 +=    10]
+[mx    30(0) +=    30] [mg    10(0) <-     0] [mx    31(1) +=    31] [mx    32(2) +=    32] 
+        EY <- EY        : [tm    11 +=    11]
+[mx    33(0) +=    33] [mg    11(0) <-     0] [mx    34(1) +=    34] [mx    35(2) +=    35] 
+         F <- F         : [tm    12 +=    12]
+[mx    36(0) +=    36] [mg    12(0) <-     0] [mx    37(1) +=    37] [mx    38(2) +=    38] 
+         G <- G         : [tm    13 +=    13]
+[mx    39(0) +=    39] [mg    13(0) <-     0] [mx    40(1) +=    40] [mx    41(2) +=    41] 
+        HH <- HH        : [tm    14 +=    14]
+[mx    42(0) +=    42] [mg    14(0) <-     0] [mx    43(1) +=    43] [mx    44(2) +=    44] 
+        IH <- IH        : [tm    15 +=    15]
+[mx    45(0) +=    45] [mg    15(0) <-     0] [mx    46(1) +=    46] [mx    47(2) +=    47] 
+        IY <- IY        : [tm    16 +=    16]
+[mx    48(0) +=    48] [mg    16(0) <-     0] [mx    49(1) +=    49] [mx    50(2) +=    50] 
+        JH <- JH        : [tm    17 +=    17]
+[mx    51(0) +=    51] [mg    17(0) <-     0] [mx    52(1) +=    52] [mx    53(2) +=    53] 
+         K <- K         : [tm    18 +=    18]
+[mx    54(0) +=    54] [mg    18(0) <-     0] [mx    55(1) +=    55] [mx    56(2) +=    56] 
+         L <- L         : [tm    19 +=    19]
+[mx    57(0) +=    57] [mg    19(0) <-     0] [mx    58(1) +=    58] [mx    59(2) +=    59] 
+         M <- M         : [tm    20 +=    20]
+[mx    60(0) +=    60] [mg    20(0) <-     0] [mx    61(1) +=    61] [mx    62(2) +=    62] 
+         N <- N         : [tm    21 +=    21]
+[mx    63(0) +=    63] [mg    21(0) <-     0] [mx    64(1) +=    64] [mx    65(2) +=    65] 
+        OW <- OW        : [tm    22 +=    22]
+[mx    66(0) +=    66] [mg    22(0) <-     0] [mx    67(1) +=    67] [mx    68(2) +=    68] 
+         P <- P         : [tm    23 +=    23]
+[mx    69(0) +=    69] [mg    23(0) <-     0] [mx    70(1) +=    70] [mx    71(2) +=    71] 
+         R <- R         : [tm    24 +=    24]
+[mx    72(0) +=    72] [mg    24(0) <-     0] [mx    73(1) +=    73] [mx    74(2) +=    74] 
+         S <- S         : [tm    25 +=    25]
+[mx    75(0) +=    75] [mg    25(0) <-     0] [mx    76(1) +=    76] [mx    77(2) +=    77] 
+       SIL <- SIL       : [tm    26 +=    26]
+[mx    78(0) +=    78] [mg    26(0) <-     0] [mx    79(1) +=    79] [mx    80(2) +=    80] 
+         T <- T         : [tm    27 +=    27]
+[mx    81(0) +=    81] [mg    27(0) <-     0] [mx    82(1) +=    82] [mx    83(2) +=    83] 
+        TH <- TH        : [tm    28 +=    28]
+[mx    84(0) +=    84] [mg    28(0) <-     0] [mx    85(1) +=    85] [mx    86(2) +=    86] 
+        UW <- UW        : [tm    29 +=    29]
+[mx    87(0) +=    87] [mg    29(0) <-     0] [mx    88(1) +=    88] [mx    89(2) +=    89] 
+         V <- V         : [tm    30 +=    30]
+[mx    90(0) +=    90] [mg    30(0) <-     0] [mx    91(1) +=    91] [mx    92(2) +=    92] 
+         W <- W         : [tm    31 +=    31]
+[mx    93(0) +=    93] [mg    31(0) <-     0] [mx    94(1) +=    94] [mx    95(2) +=    95] 
+         Y <- Y         : [tm    32 +=    32]
+[mx    96(0) +=    96] [mg    32(0) <-     0] [mx    97(1) +=    97] [mx    98(2) +=    98] 
+         Z <- Z         : INFO: main.c(529): Writing dest /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/transition_matrices
+INFO: s3tmat_io.c(176): Wrote /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/transition_matrices [34x3x4 array]
+INFO: main.c(540): Writing dest /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/mixture_weights
+INFO: s3mixw_io.c(233): Wrote /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/mixture_weights [102x4x64 array]
+INFO: main.c(549): Writing dest /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/means
+INFO: s3gau_io.c(228): Wrote /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/means [34x4x64 array]
+INFO: main.c(561): Writing dest /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/variances
+INFO: s3gau_io.c(228): Wrote /Sphinx/Mounted/an4/model_parameters/an4.ci_ptm_flatinitial/variances [34x4x64 array]
+[tm    33 +=    33]
+[mx    99(0) +=    99] [mg    33(0) <-     0] [mx   100(1) +=   100] [mx   101(2) +=   101] 
+Fri Oct 27 16:09:00 2017

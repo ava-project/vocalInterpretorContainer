@@ -1,0 +1,9 @@
+-lowerf 200
+-upperf 3500
+-nfilt 31
+-transform dct
+-lifter 22
+-feat s2_4x
+-agc none
+-cmn batch
+-varnorm no

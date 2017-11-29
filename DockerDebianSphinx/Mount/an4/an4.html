@@ -1,0 +1,832 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="REFRESH" content="60">
+<title>an4</title>
+<style type="text/css">
+body {
+ background: #f0f0f5;
+}
+p,span {
+ font-family: monospace;
+}
+p {
+ margin-right: 6em;
+}
+p.phase {
+ font-weight: bold;
+ margin-bottom: 0;
+}
+p.result, p.WARNING, p.error {
+ margin-top: 0;
+ margin-bottom: 0;
+ margin-left: 5em;
+}
+span.status {
+ float: right;
+ margin-top: -1em;
+}
+.passed, .completed {
+ color: #00D000;
+}
+.WARNING, .warning {
+ color: #555500;
+}
+.FAILED, .error {
+ color: #DD0000;
+}
+</style>
+</head>
+<body>
+<h1 class="experiment">/Sphinx/Mounted/an4</h1>
+<h2 class="hostname">Training an4 on 5de423cf94be</h2>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2017-10-27 09:18)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.train-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.test-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2017-10-27 09:18)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 133 words using 34 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.704672222222222</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 130</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2017-10-27 09:18)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2017-10-27 09:18)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2017-10-27 09:18)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2017-10-27 09:18)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2017-10-27 09:18)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2017-10-27 09:18)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2017-10-27 09:18)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2017-10-27 09:18)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='error'>ERROR: Only 0 parts of 1 of Baum Welch were successfully completed</p>
+<p class='error'>ERROR: Parts 1 failed to run!</p>
+<p class='error'>ERROR: Training failed in iteration 1</p>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2017-10-27 09:33)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.train-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.test-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2017-10-27 09:33)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 133 words using 34 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.704672222222222</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 130</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2017-10-27 09:33)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2017-10-27 09:33)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2017-10-27 09:33)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2017-10-27 09:33)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2017-10-27 09:33)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2017-10-27 09:33)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2017-10-27 09:33)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2017-10-27 09:33)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='error'>ERROR: Only 0 parts of 1 of Baum Welch were successfully completed</p>
+<p class='error'>ERROR: Parts 1 failed to run!</p>
+<p class='error'>ERROR: Training failed in iteration 1</p>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2017-10-27 10:01)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.train-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.test-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2017-10-27 10:01)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 133 words using 34 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.704672222222222</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 130</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2017-10-27 10:01)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2017-10-27 10:01)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2017-10-27 10:01)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2017-10-27 10:01)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2017-10-27 10:01)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2017-10-27 10:01)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2017-10-27 10:01)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2017-10-27 10:01)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='error'>ERROR: Only 0 parts of 1 of Baum Welch were successfully completed</p>
+<p class='error'>ERROR: Parts 1 failed to run!</p>
+<p class='error'>ERROR: Training failed in iteration 1</p>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2017-10-27 10:04)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.train-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 948 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.test-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 130 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2017-10-27 10:04)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 133 words using 34 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.704672222222222</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 130</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2017-10-27 10:04)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2017-10-27 10:04)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2017-10-27 10:04)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2017-10-27 10:04)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2017-10-27 10:04)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2017-10-27 10:04)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2017-10-27 10:04)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2017-10-27 10:04)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -6.92247774773141</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -4.81766936558368</p>
+<p class='result'>Convergence Ratio = 2.10480838214773</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -1.97304972366979</p>
+<p class='result'>Convergence Ratio = 2.84461964191389</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -0.292634124612704</p>
+<p class='result'>Convergence Ratio = 1.68041559905709</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.127712017407621</p>
+<p class='result'>Convergence Ratio = 0.420346142020325</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.286657784154966</p>
+<p class='result'>Convergence Ratio = 0.158945766747345</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 7 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.7-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 7</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.7.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.342886133032694</p>
+<p class='result'>Training completed after 7 iterations</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 60 Lattice Generation	(2017-10-27 10:04)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 61 Lattice Pruning	(2017-10-27 10:04)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 62 Lattice Format Conversion	(2017-10-27 10:04)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 65 MMIE Training	(2017-10-27 10:04)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 90 deleted interpolation	(2017-10-27 10:04)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: DECODE Decoding using models previously trained	(2017-10-27 10:04)</h3>
+<p class='result'>Decoding 130 segments starting at 0 (part 1 of 1) </p>
+<p class='result'>pocketsphinx_batch <a href="file:///Sphinx/Mounted/an4/logdir/decode/an4-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<span class='status completed'>completed</span>
+<p>        Aligning results to find error rate</p>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2017-10-27 15:28)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.train-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 948 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.test-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 130 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2017-10-27 15:28)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 133 words using 34 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.704672222222222</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 130</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2017-10-27 15:28)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2017-10-27 15:28)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2017-10-27 15:28)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2017-10-27 15:28)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2017-10-27 15:28)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2017-10-27 15:28)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2017-10-27 15:28)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2017-10-27 15:28)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -6.92247774773141</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -4.81766936558368</p>
+<p class='result'>Convergence Ratio = 2.10480838214773</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -1.97304972366979</p>
+<p class='result'>Convergence Ratio = 2.84461964191389</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -0.292634124612704</p>
+<p class='result'>Convergence Ratio = 1.68041559905709</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.127712017407621</p>
+<p class='result'>Convergence Ratio = 0.420346142020325</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.286657784154966</p>
+<p class='result'>Convergence Ratio = 0.158945766747345</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 7 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.7-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 7</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.7.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.342886133032694</p>
+<p class='result'>Training completed after 7 iterations</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 60 Lattice Generation	(2017-10-27 15:29)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 61 Lattice Pruning	(2017-10-27 15:29)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 62 Lattice Format Conversion	(2017-10-27 15:29)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 65 MMIE Training	(2017-10-27 15:29)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 90 deleted interpolation	(2017-10-27 15:29)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: DECODE Decoding using models previously trained	(2017-10-27 15:29)</h3>
+<p class='result'>Decoding 130 segments starting at 0 (part 1 of 1) </p>
+<p class='result'>pocketsphinx_batch <a href="file:///Sphinx/Mounted/an4/logdir/decode/an4-1-1.log">Log File</a></p><p class='error'>ERROR: FATAL: "batch.c", line 822: PocketSphinx decoder init failed</p>
+<p class='error'>ERROR: This step had 1 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status FAILED'>FAILED</span>
+<p class='error'>ERROR: Failed to start pocketsphinx_batch</p>
+<p>        Aligning results to find error rate</p>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2017-10-27 15:38)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.train-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 3 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.test-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 3 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2017-10-27 15:38)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 133 words using 34 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.704672222222222</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 130</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2017-10-27 15:38)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2017-10-27 15:38)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2017-10-27 15:38)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2017-10-27 15:38)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2017-10-27 15:38)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2017-10-27 15:38)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2017-10-27 15:38)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2017-10-27 15:38)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -6.92247774773141</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -4.81766936558368</p>
+<p class='result'>Convergence Ratio = 2.10480838214773</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -1.97304972366979</p>
+<p class='result'>Convergence Ratio = 2.84461964191389</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -0.292634124612704</p>
+<p class='result'>Convergence Ratio = 1.68041559905709</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.127712017407621</p>
+<p class='result'>Convergence Ratio = 0.420346142020325</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.286657784154966</p>
+<p class='result'>Convergence Ratio = 0.158945766747345</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 7 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.7-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 7</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.1.7.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 0.342886133032694</p>
+<p class='result'>Training completed after 7 iterations</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 60 Lattice Generation	(2017-10-27 15:39)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 61 Lattice Pruning	(2017-10-27 15:39)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 62 Lattice Format Conversion	(2017-10-27 15:39)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 65 MMIE Training	(2017-10-27 15:39)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 90 deleted interpolation	(2017-10-27 15:39)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: DECODE Decoding using models previously trained	(2017-10-27 15:39)</h3>
+<p class='result'>Decoding 130 segments starting at 0 (part 1 of 1) </p>
+<p class='result'>pocketsphinx_batch <a href="file:///Sphinx/Mounted/an4/logdir/decode/an4-1-1.log">Log File</a></p><p class='error'>ERROR: FATAL: "batch.c", line 822: PocketSphinx decoder init failed</p>
+<p class='error'>ERROR: This step had 1 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status FAILED'>FAILED</span>
+<p class='error'>ERROR: Failed to start pocketsphinx_batch</p>
+<p>        Aligning results to find error rate</p>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2017-10-27 16:08)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.train-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 948 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///Sphinx/Mounted/an4/logdir/000.comp_feat/an4.test-1-1.log">Log File</a></p><p class='error'>ERROR: This step had 130 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2017-10-27 16:08)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 133 words using 34 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.704672222222222</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 130</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2017-10-27 16:08)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2017-10-27 16:08)</h3>
+<p>Skipped for multistream setup, see CFG_NUM_STREAMS configuration</p>
+<p>LDA/MLLT only has sense for single stream features</p>
+<p>Skipping LDA training</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2017-10-27 16:08)</h3>
+<p>Skipped for multistream setup, see CFG_NUM_STREAMS configuration</p>
+<p>LDA/MLLT only has sense for single stream features</p>
+<p>Skipping MLLT training</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2017-10-27 16:08)</h3>
+<p class='result'>agg_seg <a href="file:///Sphinx/Mounted/an4/logdir/05.vector_quantize/an4.vq.agg_seg.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>kmeans_init <a href="file:///Sphinx/Mounted/an4/logdir/05.vector_quantize/an4.kmeans.log">Log File</a></p><span class='status completed'>completed</span>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2017-10-27 16:08)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2017-10-27 16:08)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2017-10-27 16:08)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2017-10-27 16:09)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_mixw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.duplicate_codebook.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -7.84893685795602</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -0.232903122807294</p>
+<p class='result'>Convergence Ratio = 7.61603373514873</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 2.91694286547725</p>
+<p class='result'>Convergence Ratio = 3.14984598828455</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.4-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 4.45293319983286</p>
+<p class='result'>Convergence Ratio = 1.53599033435561</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.5-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 5.22027183639359</p>
+<p class='result'>Convergence Ratio = 0.767338636560734</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.6-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 5.65377914081409</p>
+<p class='result'>Convergence Ratio = 0.4335073044205</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 7 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.7-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 7</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.7.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 5.92954959358567</p>
+<p class='result'>Convergence Ratio = 0.27577045277158</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 8 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.8-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 8</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.8.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 6.11586159049519</p>
+<p class='result'>Convergence Ratio = 0.186311996909517</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 9 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.9-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 9</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.9.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = 6.24984429324903</p>
+<p class='result'>Convergence Ratio = 0.133982702753838</p>
+<p class='result'>Baum welch starting for 64 Gaussian(s), iteration: 10 (1 of 1)</p>
+<p class='result'>bw <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.10-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 10</p>
+<p class='result'>norm <a href="file:///Sphinx/Mounted/an4/logdir/20.ci_hmm/an4.64.10.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Maximum desired iterations 10 performed. Terminating CI training</p>
+<p class='result'>Training completed after 10 iterations</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<p>Skipped (set $CFG_CD_TRAIN = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 60 Lattice Generation	(2017-10-27 16:17)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 61 Lattice Pruning	(2017-10-27 16:17)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 62 Lattice Format Conversion	(2017-10-27 16:17)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 65 MMIE Training	(2017-10-27 16:17)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 90 deleted interpolation	(2017-10-27 16:17)</h3>
+<p class='phase'>Phase 1: Cleaning up directories: logs...</p>
+<p class='phase'>Phase 2: Doing interpolation...</p>
+<p class='result'>delint <a href="file:///Sphinx/Mounted/an4/logdir/90.deleted_interpolation/an4.deletedintrep-1000.log">Log File</a></p><p class='error'>ERROR: This step had 1 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Dumping senones for PocketSphinx...</p>
+<p class='result'>mk_s2sendump <a href="file:///Sphinx/Mounted/an4/logdir/90.deleted_interpolation/an4.s2sendump-1000.log">Log File</a></p><p class='error'>ERROR: FATAL: "senone.c", line 213: fopen(/Sphinx/Mounted/an4/model_parameters/an4.cd_ptm_1000_delinterp/mixture_weights,rb) failed</p>
+<p class='error'>ERROR: This step had 1 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status FAILED'>FAILED</span>

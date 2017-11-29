@@ -1,5 +1,5 @@
 # Use of latest version of debian as a parent image
-FROM python:3.6
+FROM ubuntu
 
 # create working directories
 RUN mkdir -p /Sphinx
@@ -26,6 +26,13 @@ RUN pip install -r requirements.txt
 # Make sphinxtrain installations
 RUN ./installbase.sh
 RUN ./installtrain.sh
+RUN ./installpocketsphinx.sh
 
 # Set the author
 MAINTAINER AVA_Sphinx<ava_2018@labeip.epitech.eu>
+
+# Env variables
+ENV PATH /usr/local/bin:$PATH
+ENV LD_LIBRARY_PATH /usr/local/lib
+ENV PKG_CONFIG_PATH /usr/local/lib/pkgconfig
+

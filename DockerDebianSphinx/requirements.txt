@@ -1,4 +1,2 @@
 pocketsphinx
-websocket-client
 tornado
-websockets
