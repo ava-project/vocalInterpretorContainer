@@ -15,7 +15,7 @@ ADD . /Sphinx
 RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get -y install python-pip python-dev
-RUN apt-get -y install build-essential swig libpulse-dev git perl bison apt-utils
+RUN apt-get -y install build-essential swig libpulse-dev git perl bison apt-utils python3.6
 
 # Install any needed packages numpy and scipy
 RUN apt-get install -y python-numpy python-scipy
