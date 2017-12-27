@@ -1,16 +1,51 @@
-from watson_developer_cloud import SpeechToTextV1
+"""
+    Speech-To-Text class handling for AVA
+
+    STT: We are using CMUSphinx opensource library
+    CMUSphinx:
+        - English language model
+        - Customize dictionnary
+"""
+
+from pocketsphinx.pocketsphinx import *
+from sphinxbase.sphinxbase import *
+
+import os
 
 # Class used to connect and send informations to Watson
 class STT_Engine():
 
+    # PocketSphinx folder
+    MODELDIR = "/usr/local/share/pocketsphinx/model"
+
     def __init__(self):
-        self.stt = SpeechToTextV1(
-            username = 'ed8e6084-ebe7-4570-a387-be01bcefcad5',
-            password = 'ksiqNlaLyhaX',
-            x_watson_learning_opt_out=False
-        )
+        # Microphone stream config.
+        self.RATE = 16000
+        self.FPB = 2048
+        self.CHUNK = 1024
+        self.FORMAT = pyaudio.paInt16
+        self.CHANNELS = 1
+
+        self.THRESHOLD = 4500
+        self.num_phrases = -1
+
+        # Create a decoder with certain model
+        config = Decoder.default_config()
+        config.set_string('-hmm', os.path.join(MODELDIR, 'en-us/en-us'))
+        config.set_string('-lm', os.path.join(MODELDIR, 'en-us/en-us.lm.bin'))
+        config.set_string('-dict', os.path.join(MODELDIR, 'en-us/cmudict-en-us.dict'))
+        config.set_string('-logfn', '/dev/null')
+
+        # Creaders decoder object for streaming data.
+        self.decoder = Decoder(config)
+
 
     def recognize(self, stream):
-        return self.stt.recognize(
-            stream, content_type='audio/wav', timestamps=True,
-            word_confidence=True)
+        self.decoder.start_utt()
+        self.decoder.process_raw(buf, False, False)
+        in_speech_bf = self.decoder.get_in_speech()
+        self.decoder.end_utt()
+        result = self.decoder.hyp().hypstr
+        if result == "":
+            return "No Result"
+        return result

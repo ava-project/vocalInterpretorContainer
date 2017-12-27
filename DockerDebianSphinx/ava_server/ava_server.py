@@ -8,9 +8,9 @@ import tornado.ioloop
 import tornado.web
 
 # Watson server class
-class WatsonBridge(tornado.websocket.WebSocketHandler):
+class SphinxBridge(tornado.websocket.WebSocketHandler):
 
-        #Function used to send informations to Watson via STT_Engine
+        #Function used to send informations to Sphinx via STT_Engine
 	def runBridge(self, audio):
                 result = self.stt.recognize(audio)
                 print(result)
@@ -41,7 +41,7 @@ class WatsonBridge(tornado.websocket.WebSocketHandler):
                 return True
 
 application = tornado.web.Application([
-    (r'/ava_server', WatsonBridge),
+    (r'/ava_server', SphinxBridge),
 ])
 
 
