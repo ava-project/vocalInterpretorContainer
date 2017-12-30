@@ -41,7 +41,7 @@ class SphinxBridge(tornado.websocket.WebSocketHandler):
                 return True
 
 application = tornado.web.Application([
-    (r'/ava_server', SphinxBridge),
+    (r'/sphinx', SphinxBridge),
 ])
 
 
@@ -50,5 +50,5 @@ def main():
 	http_server = tornado.httpserver.HTTPServer(application)
 	http_server.listen(8888)
 	myIP = socket.gethostbyname(socket.gethostname())
-	print('*** AVA Websocket Server Started at %s/ava_server***' % myIP)
+	print('*** AVA Websocket Server Started at %s/sphinx***' % myIP)
 	tornado.ioloop.IOLoop.instance().start()
