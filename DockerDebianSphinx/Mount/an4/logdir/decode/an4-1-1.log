@@ -118,4 +118,4 @@
 INFO: feat.c(715): Initializing feature stream to type: '1s_c_d_dd', ceplen=13, CMN='batch', VARNORM='no', AGC='none'
 ERROR: "acmod.c", line 79: Folder '/Sphinx/Mounted/an4/model_parameters/an4.cd_cont_200' does not contain acoustic model definition 'mdef'
 FATAL: "batch.c", line 822: PocketSphinx decoder init failed
-Fri Oct 27 15:39:10 2017
+Wed Nov 29 22:20:43 2017

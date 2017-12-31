@@ -29,7 +29,7 @@ class SphinxBridge(tornado.websocket.WebSocketHandler):
                 result = self.runBridge(message)
                 print ("Message received...")
                 try:
-                        self.write_message(result["results"][0]["alternatives"][0]["transcript"])
+                        self.write_message(result)
                 except:
                         self.write_message("No message")
 

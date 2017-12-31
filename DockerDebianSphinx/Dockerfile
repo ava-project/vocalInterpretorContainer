@@ -14,7 +14,7 @@ ADD . /Sphinx
 # Install any needed packages specified for python and pocketsphinx
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get -y install python python-dev python-pip
+RUN apt-get -y install python python-dev python-pip python-pyaudio
 RUN apt-get -y install git perl bison apt-utils wget
 RUN apt-get -y install build-essential swig libpulse-dev unzip
 

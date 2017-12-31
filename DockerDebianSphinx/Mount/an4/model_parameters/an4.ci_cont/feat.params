@@ -1,3 +1,4 @@
+-lowerf 200
 -upperf 3500
 -nfilt 25
 -transform dct

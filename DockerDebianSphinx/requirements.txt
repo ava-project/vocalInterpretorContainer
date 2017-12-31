@@ -1,7 +1,4 @@
 pocketsphinx
-tornado
-websocket-client
-watson-developer-cloud
 websockets
 asyncio
 wave
