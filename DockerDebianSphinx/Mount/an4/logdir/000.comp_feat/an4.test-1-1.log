@@ -25,7 +25,7 @@ Current configuration:
 -ncep			13		13
 -nchans			1		1
 -nfft			512		512
--nfilt			40		31
+-nfilt			40		25
 -nist			no		no
 -npart			0		1
 -nskip			0		0
@@ -317,4 +317,4 @@ INFO: sphinx_fe.c(787): Converting /Sphinx/Mounted/an4/wav/an4test_clstk/mmxg/ce
 ERROR: "sphinx_fe.c", line 284: Failed to open /Sphinx/Mounted/an4/wav/an4test_clstk/mmxg/cen7-mmxg-b.wav: No such file or directory
 INFO: sphinx_fe.c(787): Converting /Sphinx/Mounted/an4/wav/an4test_clstk/mmxg/cen8-mmxg-b.wav to /Sphinx/Mounted/an4/feat/an4test_clstk/mmxg/cen8-mmxg-b.mfc
 ERROR: "sphinx_fe.c", line 284: Failed to open /Sphinx/Mounted/an4/wav/an4test_clstk/mmxg/cen8-mmxg-b.wav: No such file or directory
-Fri Oct 27 16:08:43 2017
+Thu Nov 30 15:43:43 2017
